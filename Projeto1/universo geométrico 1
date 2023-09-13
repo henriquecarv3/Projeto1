@@ -1,0 +1,71 @@
+Class Forma:
+    Método CalcularArea():
+
+Class Circulo herda de Forma:
+    Atributos:
+        - raio: Real
+
+    Método Construtor(raio):
+        this.raio = raio
+
+    Método CalcularArea():
+        Retorna 3.14159 * raio * raio
+
+Class Triangulo herda de Forma:
+    Atributos:
+        - base: Real
+        - altura: Real
+
+    Método Construtor(base, altura):
+        this.base = base
+        this.altura = altura
+
+    Método CalcularArea():
+        Retorna (base * altura) / 2.0
+
+Class Retangulo herda de Forma:
+    Atributos:
+        - comprimento: Real
+        - largura: Real
+
+    Método Construtor(comprimento, largura):
+        this.comprimento = comprimento
+        this.largura = largura
+
+    Método CalcularArea():
+        Retorna comprimento * largura
+
+Class Ponto:
+    Atributos:
+        - x: Real
+        - y: Real
+
+    Método Construtor(x, y):
+        this.x = x
+        this.y = y
+
+Class Reta:
+    Atributos:
+        - ponto1: Ponto
+        - ponto2: Ponto
+
+    Método Construtor(ponto1, ponto2):
+        this.ponto1 = ponto1
+        this.ponto2 = ponto2
+
+circulo = Novo Circulo(2.0)
+triangulo = Novo Triangulo(4.0, 3.0)
+retangulo = Novo Retangulo(5.0, 3.0)
+ponto = Novo Ponto(1.0, 1.0)
+reta = Novo Reta(ponto, Novo Ponto(4.0, 4.0))
+
+area_circulo = circulo.CalcularArea()
+area_triangulo = triangulo.CalcularArea()
+area_retangulo = retangulo.CalcularArea()
+
+Escrever("Área do círculo:", area_circulo)
+Escrever("Área do triângulo:", area_triangulo)
+Escrever("Área do retângulo:", area_retangulo)
+
+Escrever("Ponto 1 da reta:", reta.ponto1.x, ",", reta.ponto1.y)
+Escrever("Ponto 2 da reta:", reta.ponto2.x, ",", reta.ponto2.y)
